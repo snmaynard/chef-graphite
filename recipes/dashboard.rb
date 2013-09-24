@@ -59,7 +59,7 @@ end
 web_app "graphite" do
   template "graphite.conf.erb"
   docroot "#{node['graphite']['home']}/webapp"
-  server_name "graphite"
+  server_name node["graphite"]['server_name']
   port node['graphite']['port']
   graphite_home node["graphite"]["home"]
 end

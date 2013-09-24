@@ -1,6 +1,7 @@
 default["graphite"]["version"]                              = "0.9.10"
 default["graphite"]["home"]                                 = "/opt/graphite"
 default["graphite"]["port"]                                 = "80"
+default["graphite"]["server_name"]                          = "graphite"
 default["graphite"]["carbon"]["line_receiver_interface"]    = "127.0.0.1"
 default["graphite"]["carbon"]["pickle_receiver_interface"]  = "127.0.0.1"
 default["graphite"]["carbon"]["cache_query_interface"]      = "127.0.0.1"
