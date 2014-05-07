@@ -81,5 +81,6 @@ end
 
 service "carbon-cache" do
   provider Chef::Provider::Service::Upstart
+  supports :status => true
   action [ :enable, :start ]
 end
