@@ -67,6 +67,18 @@ logrotate_app "carbon" do
   create "644 root root"
 end
 
+python_pip "daemonize" do
+  action :install
+end
+
+cookbook_file "#{node['graphite']['home']}/lib/carbon/util.py" do
+  owner "root"
+  group "root"
+  mode "0644"
+  source "util.py"
+  backup false
+end
+
 service "carbon-cache" do
   provider Chef::Provider::Service::Upstart
   action [ :enable, :start ]
